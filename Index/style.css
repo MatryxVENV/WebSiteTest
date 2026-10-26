@@ -1,0 +1,296 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 80px;
+}
+
+body {
+    margin: 0;
+    padding-top: 70px;
+
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+
+    background-color: white;
+    color: #222;
+}
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 70px;
+
+    background-color: #222;
+    color: white;
+
+    z-index: 1000;
+
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+}
+
+
+/* Flexbox для header */
+
+.header-container {
+    width: 90%;
+    max-width: 1200px;
+
+    height: 100%;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+/* Логотип */
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+
+/* Навігація */
+
+nav ul {
+    display: flex;
+
+    gap: 25px;
+
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+
+/* Посилання */
+
+nav a {
+    color: white;
+
+    text-decoration: none;
+
+    padding: 10px 15px;
+
+    border-radius: 5px;
+
+    transition: 0.3s;
+}
+
+
+/* Hover */
+
+nav a:hover {
+    background-color: #555;
+    color: #fff;
+}
+
+
+/* Секції */
+
+.section {
+    padding: 80px 0;
+}
+
+
+/* Чергування кольорів */
+
+.section:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.section:nth-child(odd) {
+    background-color: white;
+}
+
+
+.section h2 {
+    margin-top: 0;
+
+    font-size: 32px;
+}
+
+
+/* CARDS */
+
+.cards {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.card {
+    position: relative;
+
+    background-color: white;
+
+    padding: 30px;
+
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+}
+
+
+/* Бейдж */
+
+.badge {
+    position: absolute;
+
+    top: -10px;
+    right: 15px;
+
+    background-color: crimson;
+    color: white;
+
+    padding: 5px 12px;
+
+    border-radius: 15px;
+
+    font-size: 12px;
+    font-weight: bold;
+
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* GRID ГАЛЕРЕЯ */
+
+.grid-gallery {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+
+.gallery-item {
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+
+.grid-gallery img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+
+    object-fit: cover;
+
+    transition: transform 0.3s;
+}
+
+
+.grid-gallery img:hover {
+    transform: scale(1.05);
+}
+
+
+/* FOOTER */
+
+footer {
+    background-color: #222;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 25px;
+}
+
+
+/* Кнопка "вгору" */
+
+.back-to-top {
+    position: fixed;
+
+    bottom: 25px;
+    right: 25px;
+
+    width: 50px;
+    height: 50px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background-color: #222;
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 24px;
+
+    z-index: 1001;
+
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.3);
+
+    transition: 0.3s;
+}
+
+
+.back-to-top:hover {
+    background-color: #555;
+
+    transform: translateY(-5px);
+}
+
+
+/* Адаптивність */
+
+@media (max-width: 768px) {
+
+    .header-container {
+        flex-direction: column;
+        justify-content: center;
+
+        gap: 5px;
+    }
+
+    .site-header {
+        height: auto;
+        padding: 10px 0;
+    }
+
+    body {
+        padding-top: 100px;
+    }
+
+    nav ul {
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 5px 8px;
+        font-size: 14px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+    }
+
+    .grid-gallery {
+        grid-template-columns: 1fr;
+    }
+}
