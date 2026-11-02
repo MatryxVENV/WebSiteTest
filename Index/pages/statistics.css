@@ -1,0 +1,794 @@
+
+/* ========================================
+   STATISTICS PAGE
+======================================== */
+
+.statistics-hero {
+    padding: 55px 0;
+
+    background: linear-gradient(
+        120deg,
+        #10243A,
+        #244D70
+    );
+
+    color: white;
+
+    border-bottom: 4px solid #F0C84B;
+}
+
+.statistics-hero-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 30px;
+}
+
+.statistics-label {
+    margin: 0 0 12px;
+
+    color: #F0C84B;
+
+    font-size: 13px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.statistics-hero h1 {
+    max-width: 750px;
+
+    margin: 0 0 15px;
+
+    font-size: 38px;
+    line-height: 1.25;
+}
+
+.statistics-hero-content > div:first-child > p:last-child {
+    max-width: 650px;
+
+    margin-bottom: 0;
+
+    color: #DCE6EF;
+    font-size: 17px;
+}
+
+/* ========================================
+   REPORT DATE
+======================================== */
+
+.report-date {
+    min-width: 180px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 22px;
+
+    background-color: rgba(255, 255, 255, 0.1);
+
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+}
+
+.report-date span {
+    font-size: 13px;
+    color: #DCE6EF;
+}
+
+.report-date strong {
+    margin: 5px 0;
+
+    font-size: 25px;
+    color: #F0C84B;
+}
+
+.report-date small {
+    color: #DCE6EF;
+}
+
+/* ========================================
+   STATISTICS LAYOUT
+======================================== */
+
+.statistics-layout {
+    display: grid;
+
+    grid-template-columns: minmax(0, 1fr) 260px;
+
+    gap: 25px;
+
+    align-items: start;
+
+    padding-top: 40px;
+    padding-bottom: 70px;
+}
+
+.statistics-main {
+    min-width: 0;
+}
+
+.statistics-section {
+    margin-bottom: 35px;
+}
+
+.statistics-section h2,
+.statistics-sidebar h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    color: #10243A;
+
+    font-size: 25px;
+}
+
+/* Section headings */
+
+.statistics-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 15px;
+}
+
+.statistics-heading h2 {
+    margin-bottom: 20px;
+}
+
+.unit-label {
+    margin-bottom: 20px;
+
+    padding: 5px 10px;
+
+    background-color: #E6EDF4;
+
+    border-radius: 5px;
+
+    color: #244D70;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+/* ========================================
+   STATISTICS CARDS
+======================================== */
+
+.statistics-cards {
+    display: grid;
+
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(185px, 1fr)
+    );
+
+    gap: 15px;
+}
+
+.statistics-card {
+    display: flex;
+    flex-direction: column;
+
+    min-width: 0;
+    padding: 20px;
+
+    background-color: white;
+
+    border: 1px solid #E1E6EC;
+    border-left: 4px solid #244D70;
+
+    border-radius: 9px;
+
+    box-shadow: 0 3px 10px rgba(16, 36, 58, 0.06);
+}
+
+.card-label {
+    min-height: 40px;
+
+    color: #637181;
+
+    font-size: 13px;
+    line-height: 1.4;
+}
+
+.statistics-card strong {
+    margin: 9px 0;
+
+    color: #10243A;
+
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.statistics-card small {
+    color: #84909B;
+    font-size: 12px;
+}
+
+/* ========================================
+   DONUT CHART
+======================================== */
+
+.chart-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    gap: 45px;
+
+    padding: 30px;
+
+    background-color: white;
+
+    border: 1px solid #E1E6EC;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 10px rgba(16, 36, 58, 0.06);
+}
+
+.donut-wrapper {
+    flex-shrink: 0;
+}
+
+.donut-chart {
+    position: relative;
+
+    width: 240px;
+    aspect-ratio: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: conic-gradient(
+        #F0C84B 0% 45%,
+        #28579A 45% 69%,
+        #398CC7 69% 86%,
+        #7EC1E5 86% 95%,
+        #CBD3DC 95% 100%
+    );
+}
+
+.donut-chart::before {
+    content: "";
+
+    position: absolute;
+
+    width: 57%;
+    height: 57%;
+
+    background-color: white;
+
+    border-radius: 50%;
+}
+
+.donut-center {
+    position: relative;
+    z-index: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.donut-center strong {
+    color: #10243A;
+    font-size: 19px;
+}
+
+.donut-center span {
+    color: #637181;
+    font-size: 12px;
+}
+
+/* ========================================
+   CHART LEGEND
+======================================== */
+
+.chart-legend {
+    min-width: 0;
+}
+
+.chart-legend h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+
+    color: #10243A;
+    font-size: 19px;
+}
+
+.chart-legend ul {
+    list-style: none;
+
+    margin: 0;
+    padding: 0;
+}
+
+.chart-legend li {
+    display: flex;
+    align-items: center;
+
+    gap: 10px;
+
+    margin-bottom: 13px;
+
+    color: #455362;
+    font-size: 14px;
+}
+
+.legend-color {
+    flex-shrink: 0;
+
+    width: 12px;
+    height: 12px;
+
+    border-radius: 50%;
+}
+
+.tax {
+    background-color: #F0C84B;
+}
+
+.transfers {
+    background-color: #28579A;
+}
+
+.local-tax {
+    background-color: #398CC7;
+}
+
+.own-income {
+    background-color: #7EC1E5;
+}
+
+.other {
+    background-color: #CBD3DC;
+}
+
+.chart-note {
+    max-width: 310px;
+
+    margin-top: 20px;
+
+    color: #84909B;
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+/* ========================================
+   REGIONAL TABLE
+======================================== */
+
+.table-description {
+    margin-top: -10px;
+    margin-bottom: 18px;
+
+    color: #637181;
+    font-size: 14px;
+}
+
+.table-wrapper {
+    width: 100%;
+
+    overflow-x: auto;
+
+    background-color: white;
+
+    border: 1px solid #DCE3EA;
+    border-radius: 8px;
+}
+
+.statistics-table {
+    width: 100%;
+    min-width: 1150px;
+
+    border-collapse: collapse;
+
+    font-size: 12px;
+}
+
+.statistics-table th,
+.statistics-table td {
+    padding: 12px 9px;
+
+    border: 1px solid #E1E6EC;
+
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+.statistics-table thead tr:first-child {
+    background-color: #10243A;
+    color: white;
+}
+
+.statistics-table thead tr:first-child th {
+    text-align: center;
+    font-size: 12px;
+}
+
+.statistics-table thead tr:nth-child(2) {
+    background-color: #E9EFF5;
+    color: #10243A;
+}
+
+.statistics-table thead tr:nth-child(2) th {
+    text-align: center;
+}
+
+.statistics-table tbody th,
+.statistics-table tfoot th {
+    text-align: left;
+
+    color: #10243A;
+}
+
+.statistics-table tbody tr:nth-child(even) {
+    background-color: #F3F6F9;
+}
+
+.statistics-table tbody tr:hover {
+    background-color: #E8F0F7;
+}
+
+.statistics-table tfoot {
+    background-color: #E4EBF2;
+
+    color: #10243A;
+    font-weight: bold;
+}
+
+.statistics-table tfoot th,
+.statistics-table tfoot td {
+    border-top: 2px solid #244D70;
+}
+
+.table-note {
+    margin-top: 13px;
+
+    color: #84909B;
+    font-size: 12px;
+}
+
+/* ========================================
+   SIDEBAR
+======================================== */
+
+.statistics-sidebar {
+    position: sticky;
+    top: 90px;
+
+    padding: 22px;
+
+    background-color: white;
+
+    border: 1px solid #E1E6EC;
+    border-radius: 10px;
+
+    box-shadow: 0 3px 12px rgba(16, 36, 58, 0.06);
+}
+
+.statistics-sidebar h2 {
+    font-size: 21px;
+}
+
+.filter-box {
+    display: flex;
+    flex-direction: column;
+
+    gap: 6px;
+
+    margin-bottom: 15px;
+    padding: 13px;
+
+    background-color: #F3F6F9;
+
+    border-radius: 6px;
+}
+
+.filter-label {
+    color: #84909B;
+    font-size: 12px;
+}
+
+.filter-box strong {
+    color: #10243A;
+    font-size: 14px;
+}
+
+.sidebar-information {
+    margin-top: 20px;
+    padding-top: 15px;
+
+    border-top: 1px solid #E1E6EC;
+}
+
+.sidebar-information h3 {
+    margin-top: 0;
+
+    color: #244D70;
+    font-size: 16px;
+}
+
+.sidebar-information p {
+    margin-bottom: 0;
+
+    color: #637181;
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+/* ========================================
+   ACTIVE NAVIGATION LINK
+======================================== */
+
+.site-header nav a.active {
+    background-color: #244D70;
+    color: #F0C84B;
+}
+
+/* ========================================
+   TABLET RESPONSIVENESS
+======================================== */
+
+@media (max-width: 1000px) {
+
+    .statistics-layout {
+        grid-template-columns: 1fr;
+    }
+
+    .statistics-sidebar {
+        position: static;
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 12px;
+    }
+
+    .statistics-sidebar h2,
+    .sidebar-information {
+        grid-column: 1 / -1;
+    }
+
+    .filter-box {
+        margin-bottom: 0;
+    }
+
+    .sidebar-information {
+        margin-top: 5px;
+    }
+}
+
+/* ========================================
+   MOBILE RESPONSIVENESS
+======================================== */
+
+@media (max-width: 768px) {
+
+    .statistics-hero {
+        padding: 40px 0;
+    }
+
+    .statistics-hero-content {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .statistics-hero h1 {
+        font-size: 31px;
+    }
+
+    .report-date {
+        align-self: flex-start;
+        min-width: 170px;
+    }
+
+    .statistics-layout {
+        padding-top: 25px;
+        padding-bottom: 45px;
+    }
+
+    .chart-card {
+        flex-direction: column;
+
+        gap: 25px;
+
+        padding: 25px;
+    }
+
+    .chart-legend {
+        width: 100%;
+    }
+
+    .donut-chart {
+        width: 210px;
+    }
+
+    .statistics-sidebar {
+        grid-template-columns: 1fr;
+    }
+
+    .statistics-sidebar h2,
+    .sidebar-information {
+        grid-column: auto;
+    }
+}
+
+/* ========================================
+   SMALL MOBILE SCREENS
+======================================== */
+
+@media (max-width: 480px) {
+
+    .statistics-hero h1 {
+        font-size: 27px;
+    }
+
+    .statistics-label {
+        font-size: 11px;
+    }
+
+    .statistics-heading h2,
+    .statistics-section h2 {
+        font-size: 21px;
+    }
+
+    .statistics-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .statistics-card {
+        padding: 18px;
+    }
+
+    .statistics-card strong {
+        font-size: 22px;
+    }
+
+    .chart-card {
+        padding: 20px;
+    }
+
+    .donut-chart {
+        width: 185px;
+    }
+
+}
+
+/* ========================================
+   ADDITIONAL MOBILE IMPROVEMENTS
+======================================== */
+
+/* Tablet and mobile */
+
+@media (max-width: 768px) {
+
+    .statistics-layout {
+        width: 92%;
+        gap: 25px;
+    }
+
+    .statistics-hero-content {
+        align-items: flex-start;
+    }
+
+    .statistics-hero h1 {
+        font-size: clamp(27px, 5vw, 36px);
+    }
+
+    /* Two columns for statistics cards */
+
+    .statistics-cards {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .statistics-card {
+        padding: 16px;
+    }
+
+    .statistics-card strong {
+        font-size: 20px;
+        overflow-wrap: anywhere;
+    }
+
+    /* Chart */
+
+    .chart-card {
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+    }
+
+    .chart-legend {
+        width: 100%;
+    }
+
+    /* Sidebar */
+
+    .statistics-sidebar {
+        width: 100%;
+    }
+
+    .filter-box strong {
+        overflow-wrap: anywhere;
+    }
+
+    /* Table */
+
+    .table-wrapper {
+        max-width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+}
+
+/* Small smartphones */
+
+@media (max-width: 480px) {
+
+    .statistics-hero {
+        padding: 35px 0;
+    }
+
+    .statistics-hero h1 {
+        font-size: 27px;
+    }
+
+    /* One card per row */
+
+    .statistics-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .statistics-card {
+        padding: 18px;
+    }
+
+    /* Smaller chart */
+
+    .donut-chart {
+        width: min(185px, 65vw);
+    }
+
+    .donut-center strong {
+        font-size: 16px;
+    }
+
+    /* Smaller section headings */
+
+    .statistics-section h2 {
+        font-size: 21px;
+    }
+
+    .statistics-heading {
+        flex-wrap: wrap;
+    }
+
+    /* Sidebar */
+
+    .statistics-sidebar {
+        padding: 18px;
+    }
+
+    /* Keep table readable and scrollable */
+
+    .statistics-table {
+        min-width: 1150px;
+    }
+
+    .statistics-table th,
+    .statistics-table td {
+        padding: 10px 8px;
+    }
+
+}
